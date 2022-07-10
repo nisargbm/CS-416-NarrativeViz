@@ -1,0 +1,8 @@
+obesity_level,no_exercise,1-2_days,2-4_days,4-5_days
+Low_Weight,80,97,61,41
+Normal_Weight,40,44,22,10
+Overweight_Class_1,61,46,10,7
+Overweight_Class_2,81,39,12,13
+Class1_low_risk,34,6,64,4
+Class2_moderate_risk,28,2,5,0
+Class3_high_risk,87,0,1,0

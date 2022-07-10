@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Narrative Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/my_css.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">     -->
+</head>
+<body onload="setupSVG('exercise')">
+    <div id="app">
+        <div class="container" style="height:95%">
+            <h2>Cardiovascular diseases in individuals by categories</h2>
+            <div id="scene-1" class="page">
+                <div id="scene-1-desc" class="scene-description">
+                    <p>Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year, which accounts for 31% of all deaths worldwide. Four out of 5CVD deaths are due to heart attacks and strokes, and one-third of these deaths occur prematurely in people under 70 years of age.</p>
+                    <p>Heart disease describes a range of conditions that affect your heart. 
+                        </br> 1. Heart diseases include: Blood vessel disease, such as coronary artery disease 
+                        </br> 2. Heart rhythm problems (arrhythmias) 
+                        </br> 3. Heart defects you're born with (congenital heart defects) 
+                        </br> 4. Heart valve disease 
+                        </br> 5. Disease of the heart muscle 6. Heart infection
+                    </p>
+                    <p> High blood pressure, high blood cholesterol, and smoking are key risk factors for heart disease. Several other medical conditions and lifestyle choices can also put people at a higher risk for heart disease, including: 
+                        </br> 1. Diabetes  
+                        </br> 2. Overweight and obesity  
+                        </br> 3. Unhealthy diet  
+                        </br> 4. Physical inactivity  
+                        </br> 5. Excessive alcohol use
+                    </p>
+                    <p>Here we explore habits of physical activity, age, and tech usage as factors could possibly have an impact on heart/cardiovascularr diseases.</p>
+                    <p>
+                    Experts often rely on BMI to determine if a person is overweight. The BMI estimates your level of body fat based on your height and weight. </br>
+                        </br> 1. Low weight - if BMI is less than 18.5
+                        </br> 2. Normal weight - if BMI is 18.5 to 24.9
+                        </br> 3. Overweight Class 1 - if BMI is 25.0 to 27.9
+                        </br> 4. Overweight Class 2  - if BMI is 28.0 to 29.9
+                        </br> 5. Class 1 - Low risk Obesity - if BMI is 30.0 to 34.9
+                        </br> 6. Class 2 - Moderate risk Obesity - if BMI is 35.0 to 39.9
+                        </br> 6. Class 3 - High risk Obesity - if BMI is equal to or greater than 40.0
+                    </p>
+                    <p>Click on the buttons below the plot to navigate to the next scene in the slideshow. Hover over data in each chart to view more details.</p>
+                </div>
+            </div>
+            <br>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item prev"><a class="page-link" onclick="prevSlide()" tabindex="-1">Previous</a></li>
+                    <li class="page-item nonClick active"><a class="page-link" onclick="updateSVG('activity')">Physical activity</a></li>
+                    <li class="page-item nonClick"><a class="page-link" onclick="updateSVG('age')">Person Age</a></li>
+                    <li class="page-item nonClick"><a class="page-link" onclick="updateSVG('tech')">Tech Usage</a></li>
+                    <li class="page-item next"><a class="page-link" onclick="nextSlide()">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="dataviz-wrapper">
+                <div id="graph_plot"></div>
+            <p>UIUC CS-416 Data Vizualization.</p>
+        </div>
+    </div>
+</body>
+<!-- For Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+<script src="js/my_js.js"></script>
+</html>

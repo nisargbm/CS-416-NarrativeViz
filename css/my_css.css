@@ -1,0 +1,71 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background: rgb(49, 53, 55);
+}
+
+p, h1, h2, h3, h4 {
+    color:rgb(206, 206, 206);
+    margin-left: 80px;
+}
+
+text {
+    fill:lightgrey;
+}
+
+
+.select {
+    font: bold 14px Verdana;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    cursor: pointer;
+}
+
+.domain {
+    stroke:white;
+}
+
+.axisText {
+    font: 20px sans-serif;
+}
+
+/* Annotations */
+
+.subject {
+    stroke-width: 2;
+    stroke-dasharray: 2px;
+    fill: none
+}
+
+.annotation-note-title,.annotation-note-label {
+    fill:white;
+}
+/* :root {
+    --annotation-context-color: white;
+} */
+.annotation path {
+    stroke: white;
+}
+/* .annotation-note-label {
+    fill:white;
+} */
+
+/* Page buttons */
+.nonClick {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination>.nonClick>a {
+    color: grey;
+}
+
+.pagination>.active>a {
+    color: white;
+}
