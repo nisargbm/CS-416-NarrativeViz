@@ -127,7 +127,7 @@ function setupSVG() {
         else if (slide == "age") {
             var color = d3.scaleOrdinal()
                 .domain(subgroups)
-                .range(['#fe4644','#ff881a', '#ffee33', '#86d59c', "#3cfdea", "#ffff1a"])
+                .range(['#fe4644','#ff881a', '#ffee33', '#86d59c', "#3cfdea", "#3c69e7"])
             var legend_title = "Age Groups"
         }
         else if (slide == "tech") {

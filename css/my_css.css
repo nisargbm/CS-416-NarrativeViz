@@ -1,5 +1,5 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
     margin: 0;
     background: rgb(49, 53, 55);
 }
@@ -15,7 +15,7 @@ text {
 
 
 .select {
-    font: bold 14px Verdana;
+    font: bold 14px sans-serif;
     text-decoration: none;
     background-color: #EEEEEE;
     color: #333333;
