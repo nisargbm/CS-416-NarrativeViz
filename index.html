@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Narrative Visualization</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/my_css.css">
 </head>
 <body onload="setupSVG('exercise')">
@@ -43,7 +42,14 @@
                 </div>
             </div>
             <br>
-            <nav aria-label="Page navigation example">
+            <div class="pagination" id="pagination">
+              <a class="previous" id="prev" onclick="prevSlide()">Prev</a>
+              <a id="page1" class="active" onclick="updateSVG('activity')">Physical activity</a>
+              <a id="page2" onclick="updateSVG('age')">Person Age</a>
+              <a id="page3" onclick="updateSVG('tech')">Tech Usage</a>
+              <a id="next" class="next" onclick="nextSlide()">Next</a>
+            </div>
+            <!-- <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item prev"><a class="page-link" onclick="prevSlide()" tabindex="-1">Previous</a></li>
                     <li class="page-item nonClick active"><a class="page-link" onclick="updateSVG('activity')">Physical activity</a></li>
@@ -52,15 +58,13 @@
                     <li class="page-item next"><a class="page-link" onclick="nextSlide()">Next</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
             <div id="dataviz-wrapper">
                 <div id="graph_plot"></div>
             <p>UIUC CS-416 Data Vizualization.</p>
         </div>
     </div>
 </body>
-<!-- For Bootstrap -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>

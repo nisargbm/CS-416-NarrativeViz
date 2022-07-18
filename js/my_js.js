@@ -7,7 +7,8 @@ var margin = {top: 45, right: 200, bottom: 80, left: 100},
     height = 600 - margin.top - margin.bottom;
 
 function updateSVG(chosenSlide) {
-    slide = chosenSlide
+    slide = chosenSlide;
+    performOp(chosenSlide);
     setupSVG();
 }
 
@@ -36,32 +37,8 @@ function prevSlide() {
     updateSVG(chosenSlide)
 }
 
-// Pagination
-var pageItem = $(".pagination li").not(".prev,.next");
-var prev = $(".pagination li.prev");
-var next = $(".pagination li.next");
-
-pageItem.click(function () {
-    pageItem.removeClass("active");
-    $(this).not(".prev,.next").addClass("active");
-});
-
-next.click(function () {
-
-    if ($('li.active').next().not(".next").length == 1) {
-        $('li.active').removeClass('active').next().addClass('active');
-    }
-});
-
-prev.click(function () {
-
-    if ($('li.active').prev().not(".prev").length == 1) {
-        $('li.active').removeClass('active').prev().addClass('active');
-    }
-});
-
-
 function setupSVG() {
+
     document.getElementById("graph_plot").setAttribute("current-slide", slide);
 
     async function loadAllData() {
@@ -365,4 +342,89 @@ function setupSVG() {
 
     loadAllData();
 }
+
+var prev = document.getElementById("prev");
+var page1 = document.getElementById("page1");
+var page2 = document.getElementById("page2");
+var page3 = document.getElementById("page3");
+var next = document.getElementById("next");
+
+prev.style.backgroundColor = "grey";
+
+var abc = 0;
+
+function performOp(chosenSlide) {
+    console.log(chosenSlide);
+    if(chosenSlide == "activity") {
+        prev.style.backgroundColor = "grey";
+        next.style.backgroundColor = "white";
+        page1.classList.add('active');
+        page2.classList.remove('active');
+        page3.classList.remove('active');
+    } else if (chosenSlide == "age") {
+        page1.classList.remove('active');
+        page2.classList.add('active');
+        page3.classList.remove('active');
+        prev.style.backgroundColor = "white";
+        next.style.backgroundColor = "white";
+    } else if (chosenSlide == "tech") {
+        page1.classList.remove('active');
+        page2.classList.remove('active');
+        page3.classList.add('active');
+        prev.style.backgroundColor = "white";
+        next.style.backgroundColor = "grey";
+    } else {
+        return;
+    }
+}
+
+
+
+// Pagination
+// var pageItem = document.getElementById(".pagination").not(".prev,.next");
+// var prev = $(".pagination li.prev");
+// var next = $(".pagination li.next");
+
+// pageItem.click(function () {
+//     pageItem.removeClass("active");
+//     $(this).not(".prev,.next").addClass("active");
+// });
+
+// next.click(function () {
+
+//     if ($('li.active').next().not(".next").length == 1) {
+//         $('li.active').removeClass('active').next().addClass('active');
+//     }
+// });
+
+// prev.click(function () {
+
+//     if ($('li.active').prev().not(".prev").length == 1) {
+//         $('li.active').removeClass('active').prev().addClass('active');
+//     }
+// });
+
+// // Pagination
+// var pageItem = $(".pagination li").not(".prev,.next");
+// var prev = $(".pagination li.prev");
+// var next = $(".pagination li.next");
+
+// pageItem.click(function () {
+//     pageItem.removeClass("active");
+//     $(this).not(".prev,.next").addClass("active");
+// });
+
+// next.click(function () {
+
+//     if ($('li.active').next().not(".next").length == 1) {
+//         $('li.active').removeClass('active').next().addClass('active');
+//     }
+// });
+
+// prev.click(function () {
+
+//     if ($('li.active').prev().not(".prev").length == 1) {
+//         $('li.active').removeClass('active').prev().addClass('active');
+//     }
+// });
 
