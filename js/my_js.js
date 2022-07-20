@@ -349,14 +349,12 @@ var page2 = document.getElementById("page2");
 var page3 = document.getElementById("page3");
 var next = document.getElementById("next");
 
-prev.style.backgroundColor = "grey";
-
-var abc = 0;
+prev.style.backgroundColor = "#ddd";
 
 function performOp(chosenSlide) {
     console.log(chosenSlide);
     if(chosenSlide == "activity") {
-        prev.style.backgroundColor = "grey";
+        prev.style.backgroundColor = "#ddd";
         next.style.backgroundColor = "white";
         page1.classList.add('active');
         page2.classList.remove('active');
@@ -372,13 +370,11 @@ function performOp(chosenSlide) {
         page2.classList.remove('active');
         page3.classList.add('active');
         prev.style.backgroundColor = "white";
-        next.style.backgroundColor = "grey";
+        next.style.backgroundColor = "#ddd";
     } else {
         return;
     }
 }
-
-
 
 // Pagination
 // var pageItem = document.getElementById(".pagination").not(".prev,.next");
